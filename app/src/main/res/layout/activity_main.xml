@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="315dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="#F5F4F6"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButtonSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver saldo"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresar"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonRetirar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retirar"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSalir"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Salir"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:padding="20dp"
+        android:text="Bienvenido a Banco AwakeLab"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Ingrese Monto"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMonto"
+        app:layout_constraintStart_toStartOf="@+id/editTextMonto"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMonto"
+        app:layout_constraintVertical_bias="0.144" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
